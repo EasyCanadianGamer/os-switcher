@@ -4,6 +4,8 @@
 
 [![Watch the video](https://i9.ytimg.com/vi/bcWOOUQPjZs/mqdefault.jpg?sqp=CNjWjb8G-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGMgYyhjMA8=&rs=AOn4CLCZ5X6S_MFCqj8a3FcFH8J04ve4XA)](https://youtu.be/bcWOOUQPjZs)
 
+[![Watch the video](https://i9.ytimg.com/vi/bcWOOUQPjZs/mqdefault.jpg?sqp=CNjWjb8G-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGMgYyhjMA8=&rs=AOn4CLCZ5X6S_MFCqj8a3FcFH8J04ve4XA)](https://raw.githubusercontent.com/EasyCanadianGamer/os-switcher/main/assets/OS-Switcher.mp4)
+
 ---
 
 
