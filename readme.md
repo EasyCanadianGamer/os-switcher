@@ -2,7 +2,6 @@
 
 **OS Switcher** is a script that helps you streamline the process of switching operating systems. Follow the steps below to install and use it effectively.
 
-[![Watch the video](https://i9.ytimg.com/vi/bcWOOUQPjZs/mqdefault.jpg?sqp=CNjWjb8G-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGMgYyhjMA8=&rs=AOn4CLCZ5X6S_MFCqj8a3FcFH8J04ve4XA)](https://youtu.be/bcWOOUQPjZs)
 
 ![image](https://i.imgur.com/smwCwnb.gif)
 
