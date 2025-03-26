@@ -4,7 +4,7 @@
 
 [![Watch the video](https://i9.ytimg.com/vi/bcWOOUQPjZs/mqdefault.jpg?sqp=CNjWjb8G-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGMgYyhjMA8=&rs=AOn4CLCZ5X6S_MFCqj8a3FcFH8J04ve4XA)](https://youtu.be/bcWOOUQPjZs)
 
-![image](http://172.16.0.50:8080/i/a2969b07-0341-4f79-8aa1-34d1d9ef54d3.gif)
+![image](https://imgur.com/a/zoZpfME)
 
 ---
 
