@@ -14,7 +14,7 @@
 
 ```
 bash
-git clone <repo_url>
+git clone https://github.com/EasyCanadianGamer/os-switcher.git
 cd os-switcher
 ```
 
@@ -28,7 +28,7 @@ cd os-switcher
 
    ```
    bash
-   git clone <repo_url>
+   git clone https://github.com/EasyCanadianGamer/os-switcher.git
    cd os-switcher
    ```
 2. install the requirements using `pip install -r requirements.txt`
