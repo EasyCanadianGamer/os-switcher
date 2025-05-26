@@ -1,0 +1,8 @@
+polkit.addRule(function(action, subject) {
+    if (action.id == "org.freedesktop.policykit.exec" &&
+        subject.isInGroup("wheel")) {
+        if (action.lookup("program") && action.lookup("program").indexOf("grub-reboot") !== -1) {
+            return polkit.Result.YES;
+        }
+    }
+});
