@@ -18,20 +18,22 @@ Make sure the following dependencies are installed before using OS Switcher:
 
 #### □Install on Arch-based systems (Arch, Manjaro):
 
-\`\`\`bash
+```bash
 sudo pacman -S python tk grub polkit polkit-gnome
-\`\`\`
+```
 
 Then, to autostart the authentication agent (if you're using a window manager like i3 or Awesome):
-\`\`\`bash
+
+```bash
+
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-\`\`\`
+```
 
 #### □ Install on Debian-based systems (Ubuntu, Mint, etc.):
 
-\`\`\`bash
+```bash
 sudo apt install python3 python3-tk grub-common policykit-1 policykit-1-gnome
-\`\`\`
+```
 
 Then ensure the agent starts in your session (usually auto-started in desktop environments).
 
@@ -40,36 +42,42 @@ Then ensure the agent starts in your session (usually auto-started in desktop en
 ### ⚙️ Automatic Installation
 
 1. Clone the repo:
-   \`\`\`bash
+
+   ```bash
    git clone https://github.com/EasyCanadianGamer/os-switcher.git
    cd os-switcher
-   \`\`\`
+   ```
 2. Run the installation script:
-   \`\`\`bash
-   sudo bash install.sh
-   \`\`\`
+
+   ```bash
+
+   ```
 
 ---
 
 ### □ Manual Installation
 
 1. Clone the repo:
-   \`\`\`bash
+
+   ```bash
    git clone https://github.com/EasyCanadianGamer/os-switcher.git
    cd os-switcher
-   \`\`\`
+   ```
 2. Install Python dependencies:
-   \`\`\`bash
+
+   ```bash
    pip install -r requirements.txt
-   \`\`\`
+   ```
 3. Make the script executable:
-   \`\`\`bash
+
+   ```bash
    sudo chmod +x os-switcher.py
-   \`\`\`
+   ```
 4. Run the script:
-   \`\`\`bash
+
+   ```bash
    python os-switcher.py
-   \`\`\`
+   ```
 
 ---
 
@@ -77,6 +85,6 @@ Then ensure the agent starts in your session (usually auto-started in desktop en
 
 To remove OS Switcher and its configurations:
 
-\`\`\`bash
+```bash
 sudo bash uninstall.sh
-\`\`\`
+```
