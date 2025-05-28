@@ -50,6 +50,7 @@ Then ensure the agent starts in your session (usually auto-started in desktop en
 2. Run the installation script:
 
    ```bash
+     sudo bash install.sh
 
    ```
 
