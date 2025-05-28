@@ -7,6 +7,7 @@ set -e
 SCRIPT_NAME="os-switcher.py"
 DESKTOP_FILE="os-switcher.desktop"
 VENV_DIR="venv"
+POLKIT_RULE="/etc/polkit-1/rules.d/49-grub-reboot.rules"
 
 # Check for sudo/root privileges
 if [[ $EUID -ne 0 ]]; then
@@ -28,7 +29,16 @@ else
   echo "Desktop entry not found. Skipping."
 fi
 
-# Step 2: Remove the virtual environment
+# Step 2: Remove the Polkit rule
+echo "Removing Polkit rule if it exists..."
+if [ -f "$POLKIT_RULE" ]; then
+  rm -f "$POLKIT_RULE"
+  echo "Polkit rule $POLKIT_RULE removed."
+else
+  echo "No Polkit rule found. Skipping."
+fi
+
+# Step 3: Remove the virtual environment
 if [ -d "$VENV_DIR" ]; then
   echo "Do you want to delete the virtual environment ($VENV_DIR)? [y/N]"
   read -r RESPONSE
@@ -42,7 +52,7 @@ else
   echo "No virtual environment found. Skipping."
 fi
 
-# Step 3: Remove the script file
+# Step 4: Remove the script file
 echo "Do you want to delete the script file ($SCRIPT_NAME)? [y/N]"
 read -r RESPONSE
 if [[ "$RESPONSE" =~ ^[Yy]$ ]]; then
@@ -56,7 +66,7 @@ else
   echo "Skipping script deletion."
 fi
 
-# Step 4: Confirm cleanup
+# Step 5: Confirm cleanup
 echo "Do you want to remove any additional files or dependencies? [y/N]"
 read -r RESPONSE
 if [[ "$RESPONSE" =~ ^[Yy]$ ]]; then

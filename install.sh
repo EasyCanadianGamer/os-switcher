@@ -8,6 +8,7 @@ SCRIPT_NAME="os-switcher.py"
 DESKTOP_FILE="os-switcher.desktop"
 REQUIREMENTS_FILE="requirements.txt"
 VENV_DIR="venv"
+POLKIT_RULES_FILE="/etc/polkit-1/rules.d/49-grub-reboot.rules"
 
 # Ensure script is run with sudo/root privileges
 if [[ $EUID -ne 0 ]]; then
@@ -56,6 +57,25 @@ fi
 echo "Ensuring $SCRIPT_NAME is executable..."
 chmod +x "$SCRIPT_NAME"
 echo "$SCRIPT_NAME is now executable."
+
+# Step 5: Install Polkit Rule
+echo "Installing polkit rule for grub-reboot..."
+if [ ! -f "$POLKIT_RULES_FILE" ]; then
+  cat <<EOF > "$POLKIT_RULES_FILE"
+polkit.addRule(function(action, subject) {
+    if (action.id == "org.freedesktop.policykit.exec" &&
+        subject.isInGroup("wheel")) {
+        if (action.lookup("program") && action.lookup("program").indexOf("grub-reboot") !== -1) {
+            return polkit.Result.YES;
+        }
+    }
+});
+EOF
+  chmod 644 "$POLKIT_RULES_FILE"
+  echo "Polkit rule installed at $POLKIT_RULES_FILE."
+else
+  echo "Polkit rule already exists. Skipping installation."
+fi
 
 # Final Step: Success Message
 echo "Setup completed successfully! You can now launch OS Switcher from the application menu."
